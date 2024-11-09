@@ -7,4 +7,5 @@ export const candidateProfileSchema = yup.object().shape({
   // location: yup.string().required("Location is required"),
   // industry: yup.string().required("Industry is required"),
   // about: yup.string().required("Bio is required"),
+  
 });

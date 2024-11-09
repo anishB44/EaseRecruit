@@ -4,4 +4,5 @@ export const navbarItems = [
   { display: "Candidates", link: "/candidate-listing" },
   { display: "About", link: "/about" },
   { display: "Contact", link: "/contact" },
+  { display: "Docs", link: "https://easerecruit-docs.vercel.app/" },
 ];

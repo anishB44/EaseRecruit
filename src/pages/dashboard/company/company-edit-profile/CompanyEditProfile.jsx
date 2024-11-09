@@ -136,6 +136,12 @@ export default function CompanyEditProfile() {
               divClass="col-span-3"
             />
           </div>
+          <FormInput
+                name="videoURL"
+                label="videos"
+                placeholder="https://"
+                type="text"
+              />
 
           <div className="mt-12">
             <h2 className="text-2xl font-semibold leading-7 tracking-tight mb-6">

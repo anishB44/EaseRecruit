@@ -29,7 +29,9 @@ import NewJobOffers from "@/pages/dashboard/company/new-job-offer/NewJobOffers";
 import ManageJobs from "@/pages/dashboard/company/manage-jobs/ManageJobs";
 import Candidates from "@/pages/dashboard/company/candidates/Candidates";
 import EditJobOffer from "@/pages/dashboard/company/manage-jobs/edit-job-offer/EditJobOffer";
+import MyList from "@/pages/dashboard/company/my-list/MyList"
 import ForgetPassword from "@/pages/reset-password/ResetPassword";
+import ResumeAnalyser from "@/components/resume-analyser/ResumeAnalyser";
 import PrivateRoute from "./PrivateRoute";
 import ConfirmAccount from "../pages/confirm-account/ConfirmAccount";
 
@@ -89,6 +91,10 @@ const routes = createBrowserRouter([
         element: <DashboardHome />,
       },
       {
+        path: "analyze-resume",
+        element: <ResumeAnalyser />,
+      },
+      {
         path: "candidate",
         children: [
           {
@@ -99,6 +105,7 @@ const routes = createBrowserRouter([
             path: "applications",
             element: <Applications />,
           },
+          
           {
             path: "favourite-jobs",
             element: <FavouriteJobs />,
@@ -128,6 +135,10 @@ const routes = createBrowserRouter([
             path: "candidates",
             element: <Candidates />,
           },
+          {
+            path:"my-list",
+            element: <MyList />
+          }
         ],
       },
       {

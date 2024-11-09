@@ -1,7 +1,7 @@
 import { FaBriefcase, FaHome, FaUserCircle } from "react-icons/fa";
 import { RiEdit2Fill } from "react-icons/ri";
 import { FaRegHeart } from "react-icons/fa";
-import { IoIosLock, IoMdMail, IoMdNotifications } from "react-icons/io";
+import { IoIosLock, IoMdMail, IoMdNotifications, IoMdPeople } from "react-icons/io";
 import { IoDocumentTextOutline } from "react-icons/io5";
 import { ENUM_SIDEBAR_ITEM } from "../enums/sidebarItems";
 
@@ -50,6 +50,15 @@ export const candidateSidebardItems = [
       </div>
     ),
     link: ENUM_SIDEBAR_ITEM.CHANGE_PASSWORD,
+  },
+  {
+    display: (
+      <div className="flex items-center gap-2">
+        <IoIosLock className="text-lg" />
+        <span>Analyze resume</span>
+      </div>
+    ),
+    link: ENUM_SIDEBAR_ITEM.ANALYZE_RESUME,
   },
 ];
 
@@ -121,6 +130,14 @@ export const dashboardSidebardItemInsights = [
     link: ENUM_SIDEBAR_ITEM.INBOX,
   },
   {
+    display:(
+      <div className="flex items-center gap-2">
+        <IoMdPeople className="text-lg" />
+        <span>Interviews</span>
+      </div>
+    ), link: ENUM_SIDEBAR_ITEM.INTERVIEWS,
+  },
+  {
     display: (
       <div className="flex items-center gap-2">
         <IoMdNotifications className="text-lg" />
@@ -129,4 +146,12 @@ export const dashboardSidebardItemInsights = [
     ),
     link: ENUM_SIDEBAR_ITEM.NOTIFICATIONS,
   },
+  {
+    display:(
+      <div className="flex items-center gap-2">
+        <IoMdPeople className="text-lg" />
+        <span>My Task</span>
+      </div>
+    ), link: ENUM_SIDEBAR_ITEM.COMP_LIST,
+  }
 ];

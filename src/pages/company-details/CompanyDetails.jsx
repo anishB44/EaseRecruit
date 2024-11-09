@@ -11,13 +11,15 @@ export default function CompanyDetails() {
 
   const companyInfo = data?.data?.company;
   const availableJobs = data?.data?.availableJobs;
+  const images = companyInfo?.galleries || []; 
+  const videoUrl = companyInfo?.videoURL || ''; 
 
   return (
     <div className="max_container my-20">
       <div className="grid grid-cols-12 gap-5">
         {/* --------------- Main Content --------------- */}
         <div className="col-span-12 lg:col-span-8 xl:col-span-9 mb-8 lg:mb-0">
-          {/* +++ Comapany Banner +++ */}
+          {/* +++ Company Banner +++ */}
           <PageBanner
             rounded="rounded-xl"
             title={companyInfo?.name}
@@ -26,10 +28,12 @@ export default function CompanyDetails() {
             subtitle={userFormatText(companyInfo?.location)}
           />
 
-          {/* +++ Comapany Info +++ */}
+          {/* +++ Company Info +++ */}
           <CompanyInfo
             companyInfo={companyInfo}
             availableJobs={availableJobs}
+            images={images}
+            videoUrl={videoUrl}
           />
         </div>
 

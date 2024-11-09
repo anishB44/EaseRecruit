@@ -13,6 +13,7 @@ import {
 } from "@/constants/jobInfo";
 import AddResponsiblity from "./components/AddResponsiblity";
 import AddRequirement from "./components/AddRequirements";
+import AddStages from "./components/AddStages";
 import { catchAsync } from "@/helpers/catchAsync";
 import { usePostJobMutation } from "@/redux/api/jobApi";
 import ButtonPrimary from "@/components/ui/ButtonPrimary";
@@ -133,6 +134,11 @@ export default function NewJobOffers() {
             <AddRequirement />
           </div>
 
+          <div className="mt-12">
+            <h2 className="heading_2">Stages</h2>
+            <AddStages />
+          </div>
+          
           <div className="mt-10">
             <ButtonPrimary
               className="btn_secondary"

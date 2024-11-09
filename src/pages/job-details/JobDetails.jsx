@@ -8,7 +8,7 @@ import { useGetSingleJobQuery } from "@/redux/api/jobApi";
 const JobDetails = () => {
   const { id } = useParams();
   const { data } = useGetSingleJobQuery(id);
-
+  console.log(data);
   const jobInfo = data?.data;
 
   return (

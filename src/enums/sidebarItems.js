@@ -4,10 +4,13 @@ export const ENUM_SIDEBAR_ITEM = {
   CAND_APPLICATION: "candidate/applications",
   CAND_FAVOURITE_JOBS: "candidate/favourite-jobs",
   CHANGE_PASSWORD: "change-password",
+  ANALYZE_RESUME: "analyze-resume",
   COMP_EDIT_PROFILE: "company/edit-profile",
   COMP_NEW_JOB_OFFER: "company/new-job-offers",
   COMP_MANAGE_JOBS: "company/manage-jobs",
   COMP_CANDIDATES: "company/candidates",
+  COMP_LIST: "company/my-list",
   INBOX: "inbox",
+  INTERVIEWS:"interviews",
   NOTIFICATIONS: "notifications",
 };

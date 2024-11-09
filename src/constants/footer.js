@@ -41,8 +41,8 @@ export const footerData = [
   {
     title: "About Us",
     links: [
-      { display: "About Us", link: "/" },
-      { display: "Blog", link: "/" },
+      { display: "About Us", link: "/about" },
+      { display: "Blog", link: "/easerecruit-docs.vercel.app/" },
       { display: "FAQs", link: "/" },
       { display: "Contact Us", link: "/contact" },
       { display: "404 Page", link: "/you-hit-a-random-page" },

@@ -1,13 +1,7 @@
-import companyHero1 from "@/assets/images/company-hero/company-hero-1.jpg";
-import companyHero2 from "@/assets/images/company-hero/company-hero-2.jpg";
-import companyHero3 from "@/assets/images/company-hero/company-hero-3.jpg";
-import companyHero4 from "@/assets/images/company-hero/company-hero-4.jpg";
-import companyHero5 from "@/assets/images/company-hero/company-hero-5.jpg";
-import companyHero6 from "@/assets/images/company-hero/company-hero-6.jpg";
-import "./style/module.style.css";
+import React from 'react';
 import JobCard from "../../job-listing/components/JobCard";
 
-export default function CompanyInfo({ companyInfo, availableJobs }) {
+export default function CompanyInfo({ companyInfo, availableJobs, images, videoUrl }) {
   const firstName = companyInfo?.name?.split(" ")[0];
 
   return (
@@ -23,45 +17,20 @@ export default function CompanyInfo({ companyInfo, availableJobs }) {
       {/* +++ Gallery +++ */}
       <div className="my-4">
         <div className="grid grid-cols-12 gap-2">
-          <figure className="img_container">
-            <img className="img_class h-[300px] " src={companyHero6} alt="" />
-          </figure>
-          <figure className="img_container">
-            <img className="img_class h-[300px] " src={companyHero5} alt="" />
-          </figure>
-          <figure className="img_container">
-            <img
-              className="img_class h-[580px] lg:h-[300px] "
-              src={companyHero4}
-              alt=""
-            />
-          </figure>
-          <figure className="img_container">
-            <img className="img_class h-[580px] " src={companyHero3} alt="" />
-          </figure>
-          <figure className="img_container">
-            <img
-              className="img_class h-[300px]  lg:h-[580px] "
-              src={companyHero2}
-              alt=""
-            />
-          </figure>
-          <figure className="img_container">
-            <img
-              className="img_class h-[300px] lg:h-[580px] "
-              src={companyHero1}
-              alt=""
-            />
-          </figure>
+          {images?.map((image, index) => (
+            <figure className="img_container" key={index}>
+              <img className={`img_class ${index === 2 || index === 3 ? 'h-[580px]' : 'h-[300px]'}`} src={image} alt={`Company Image ${index + 1}`} />
+            </figure>
+          ))}
         </div>
       </div>
 
-      <p className="text_accent">
+      {/* <p className="text_accent">
         Artistre Studio, Inc. is an American multinational corporation that is
         engaged in the design, development, manufacturing, and worldwide
         marketing and sales of footwear, apparel, equipment, accessories, and
         services.
-      </p>
+      </p> */}
 
       {/* +++ Video & Info +++ */}
       <div className="mt-7 flex gap-6 flex-col md:flex-row">
@@ -69,14 +38,14 @@ export default function CompanyInfo({ companyInfo, availableJobs }) {
           <div className="iframe_container">
             <iframe
               className="rounded-2xl responsive_iframe"
-              src="https://www.youtube.com/embed/d1EaFyBqH5o?si=V3g3HZQHEm4U4bJh"
+              src={videoUrl}
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
             ></iframe>
           </div>
         </div>
-        <div className="flex-1">
+        {/* <div className="flex-1">
           <p className="text_accent">
             In 2020 the brand alone was valued in excess of $32 billion, making
             it the most valuable brand among sports businesses. Previously, in
@@ -87,7 +56,7 @@ export default function CompanyInfo({ companyInfo, availableJobs }) {
             have suffered alteration in some form, by injected humour, or
             randomised words which don’t look even slightly believable.
           </p>
-        </div>
+        </div> */}
       </div>
 
       {/* +++ Available Jobs +++ */}
